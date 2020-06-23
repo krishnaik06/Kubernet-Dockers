@@ -1,7 +1,7 @@
   
 FROM continuumio/anaconda3:4.4.0
-COPY . /usr/app/
+COPY . /app
 EXPOSE 5000
-WORKDIR /usr/app/
+WORKDIR /app
 RUN pip install -r requirements.txt
-CMD python flask_api.py
+CMD python app.py
